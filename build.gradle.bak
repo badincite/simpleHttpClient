@@ -1,2 +1,0 @@
-apply from: "${System.getenv('niagara_home')}/etc/gradle/niagara.gradle"
-apply from: "${System.getenv('niagara_home')}/etc/gradle/idea.gradle"
