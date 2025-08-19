@@ -1,10 +1,9 @@
-<module name="simpleHttpClient" runtimeProfile="rt" vendor="ChesapeakeControls" version="1.0.0">
-  <dependencies>
-    <dependency module="baja"/>
-    <dependency module="nre"/>
-  </dependencies>
-  <palettes>
-    <!-- Workbench reads this palette file from the JAR root -->
-    <palette name="CHttp" file="module.palette"/>
-  </palettes>
+<module>
+  <name>simpleHttpClient</name>
+  <runtime-profile>rt</runtime-profile>
+  <module-dependencies>
+    <module-dependency>nre</module-dependency>
+    <module-dependency>baja</module-dependency>
+  </module-dependencies>
+  <source-dir>src</source-dir>
 </module>
