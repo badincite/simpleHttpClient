@@ -1,5 +1,5 @@
 // Pull in Niagara's Gradle (provides niagaraModule{}, moduleJar, installModule, codegen, etc.)
-apply from: "${System.getenv('niagara_home')}/etc/gradle/niagara.gradle"
+apply from: "${System.getenv('NIAGARA_HOME')}/etc/gradle/niagara.gradle"
 
 niagaraModule {
   moduleName      = "simpleHttpClient"
@@ -11,14 +11,6 @@ niagaraModule {
 dependencies {
   niagaraModuleCompile "Tridium:nre:4.12"
   niagaraModuleCompile "Tridium:baja:4.12"
-}
-
-// Always include the ROOT module descriptors in the JAR
-tasks.named("moduleJar") {
-  from("$rootDir") {
-    include "module.xml"
-    include "module.palette"
-  }
 }
 
 // Optional aliases so :simpleHttpClient-rt:jar / :build work too

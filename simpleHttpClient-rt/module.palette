@@ -2,5 +2,8 @@
 <bajaObjectGraph version="4.0">
   <p m="b=baja" t="b:Folder">
     <p m="simpleHttpClient" t="simpleHttpClient:BSimpleHttpClientService" n="SimpleHttpClient"/>
+    <p m="simpleHttpClient" t="simpleHttpClient:BHttpSender" n="HttpSender"/>
+    <p m="simpleHttpClient" t="simpleHttpClient:BHttpRequest" n="HttpRequest"/>
+    <p m="simpleHttpClient" t="simpleHttpClient:BHttpResult"  n="HttpResult"/>
   </p>
 </bajaObjectGraph>

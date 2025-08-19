@@ -1,3 +1,2 @@
 rootProject.name = "simpleHttpClient"
 include 'simpleHttpClient-rt'
-include 'simpleHttpClient-wb'

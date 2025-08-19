@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <name>simpleHttpClient</name>
+  <runtimeProfile>rt</runtimeProfile>
+  <version>1.0.0</version>
+  <module-dependencies>
+    <module-dependency>nre</module-dependency>
+    <module-dependency>baja</module-dependency>
+  </module-dependencies>
+</module>

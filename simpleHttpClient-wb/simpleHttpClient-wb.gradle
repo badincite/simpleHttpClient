@@ -1,0 +1,12 @@
+apply from: "${System.getenv('NIAGARA_HOME')}/etc/gradle/niagara.gradle"
+
+niagaraModule {
+  moduleName      = "simpleHttpClient-wb"
+  runtimeProfile  = "wb"
+  preferredSymbol = "cHttp"
+}
+
+dependencies {
+  niagaraModuleCompile "Tridium:nre:4.12"
+  niagaraModuleCompile "Tridium:baja:4.12"
+}
