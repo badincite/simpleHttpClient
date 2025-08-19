@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bajaObjectGraph version="4.0">
+  <!-- map symbols: 'b' = baja; 'cHttp' = your preferredSymbol; bind to your module name -->
   <p m="b=baja, cHttp=simpleHttpClient" t="b:UnrestrictedFolder">
     <p t="cHttp:BSimpleHttpClientService" n="BSimpleHttpClientService"/>
     <p t="cHttp:BHttpSender"              n="BHttpSender"/>

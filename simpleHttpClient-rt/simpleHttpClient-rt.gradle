@@ -1,20 +1,19 @@
-// Wire in Niagara's Gradle (this provides niagaraModule{}, moduleJar, installModule, codegen, etc.)
+// Pull in Niagara's Gradle (provides niagaraModule{}, moduleJar, installModule, codegen, etc.)
 apply from: "${System.getenv('niagara_home')}/etc/gradle/niagara.gradle"
 
-// Define the module
 niagaraModule {
-  moduleName       = "simpleHttpClient"
-  runtimeProfile   = "rt"
-  preferredSymbol  = "cHttp"
+  moduleName      = "simpleHttpClient"
+  runtimeProfile  = "rt"
+  preferredSymbol = "cHttp"
 }
 
-// (Optional) Dependencies – usually not needed for HttpURLConnection-only code
+// Niagara dependency configs (compile-time against the SDK)
 dependencies {
   niagaraModuleCompile "Tridium:nre:4.12"
   niagaraModuleCompile "Tridium:baja:4.12"
 }
 
-// Ensure the root module files are packed into the JAR every build
+// Always include the ROOT module descriptors in the JAR
 tasks.named("moduleJar") {
   from("$rootDir") {
     include "module.xml"
@@ -22,6 +21,6 @@ tasks.named("moduleJar") {
   }
 }
 
-// (Optional) Aliases so :simpleHttpClient-rt:jar / :build work if you prefer
+// Optional aliases so :simpleHttpClient-rt:jar / :build work too
 tasks.register("jar")   { dependsOn("moduleJar") }
 tasks.register("build") { dependsOn("moduleJar") }

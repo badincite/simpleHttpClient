@@ -4,7 +4,7 @@
     <dependency module="nre"/>
   </dependencies>
   <palettes>
-    <!-- tell Workbench to use the root module.palette file -->
+    <!-- Workbench reads this palette file from the JAR root -->
     <palette name="CHttp" file="module.palette"/>
   </palettes>
 </module>
