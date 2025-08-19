@@ -1,2 +1,5 @@
-apply from: "${System.getenv('NIAGARA_HOME')}/etc/gradle/niagara.gradle"
-apply from: "${System.getenv('NIAGARA_HOME')}/etc/gradle/moduleJars.gradle"
+// Root build.gradle – do NOT apply Niagara scripts here.
+// Just tell Gradle to load each subproject’s own *.gradle file.
+subprojects {
+    apply from: "${rootDir}/${project.name}/${project.name}.gradle"
+}
