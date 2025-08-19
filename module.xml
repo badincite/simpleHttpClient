@@ -1,0 +1,10 @@
+<module name="simpleHttpClient" runtimeProfile="rt" vendor="ChesapeakeControls" version="1.0.0">
+  <dependencies>
+    <dependency module="baja"/>
+    <dependency module="nre"/>
+  </dependencies>
+  <palettes>
+    <!-- tell Workbench to use the root module.palette file -->
+    <palette name="CHttp" file="module.palette"/>
+  </palettes>
+</module>
